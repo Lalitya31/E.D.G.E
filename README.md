@@ -23,25 +23,6 @@ EDGE models burnout as a gradual process. The UI mirrors that progression—from
 - **Framer Motion** (scroll animations)
 - **Three.js** via `@react-three/fiber` (minimal WebGL for flame)
 
-## Installation
-
-```bash
-npm install
-```
-
-## Development
-
-```bash
-npm run dev
-```
-
-Opens at `http://localhost:3000`
-
-## Build
-
-```bash
-npm run build
-```
 
 ## Project Structure
 
@@ -100,7 +81,6 @@ src/
 **Why this color palette?**
 > "Color hierarchy reinforces the narrative of cognitive strain resolving into clarity."
 
-## License
 
 Built with intention for the EDGE project.
 
