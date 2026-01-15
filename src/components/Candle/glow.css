@@ -1,0 +1,61 @@
+/* Candle-specific glow and effects */
+
+.candle-glow {
+  filter: drop-shadow(0 0 20px rgba(246, 178, 107, 0.4))
+          drop-shadow(0 0 40px rgba(230, 145, 56, 0.3))
+          drop-shadow(0 0 60px rgba(180, 95, 6, 0.2));
+}
+
+.flame-core {
+  filter: blur(2px);
+}
+
+.flame-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(246, 178, 107, 0.3) 0%,
+    rgba(230, 145, 56, 0.2) 30%,
+    rgba(180, 95, 6, 0.1) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.candle-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* WebGL canvas positioning */
+.flame-canvas {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Static fallback flame (SVG) */
+.static-flame {
+  fill: url(#flameGradient);
+  filter: drop-shadow(0 0 10px rgba(246, 178, 107, 0.5));
+}
+
+@keyframes flicker-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(0.98); }
+}
+
+.flame-flicker {
+  animation: flicker-subtle 3s ease-in-out infinite;
+}
