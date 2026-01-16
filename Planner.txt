@@ -1,0 +1,3 @@
+DA1 : Data storage design , normalization and data modeling diagram + Frontend + PPT + idea explanation
+DA2: demo + Implementation knowledge + base code 
+DA3 : demo + Implementation knowledge + report submission (complete project)
